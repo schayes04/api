@@ -21,6 +21,8 @@ jobs:
       - name: Install dependencies
         run: bundle install
       - name: Run updates
+        env:
+          COUNTDOWNS_API_KEY: ${{ secrets.COUNTDOWNS_API_KEY }}
         run: bundle exec ruby update.rb
       - name: Commit files
         run: |

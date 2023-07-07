@@ -21,7 +21,7 @@ def self.get_overview_metrics(api_key:, project_id:)
 end
 
 projects = {
-  "${{ env.COUNTDOWNS_APP_ID }}": "${{ secrets.COUNTDOWNS_API_KEY }}"
+  ENV["COUNTDOWNS_APP_ID"]: ENV["COUNTDOWNS_API_KEY"]
 }
 
 revenue = 0
