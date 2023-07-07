@@ -24,7 +24,7 @@ jobs:
         env:
           COUNTDOWNS_API_KEY: ${{ secrets.COUNTDOWNS_API_KEY }}
         run: 
-          echo $COUNTDOWNS_API_KEY
+          echo $COUNTDOWNS_APP_ID
       - name: Commit files
         run: |
           git config --local user.email "support@shayesapps.com"
