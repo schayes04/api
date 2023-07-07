@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    json (2.6.3)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  json
+
+BUNDLED WITH
+   2.4.15
