@@ -22,6 +22,7 @@ jobs:
         run: bundle install
       - name: Run updates
         env:
+          COUNTDOWNS_APP_ID: ${{ vars.COUNTDOWNS_APP_ID }}
           COUNTDOWNS_API_KEY: ${{ secrets.COUNTDOWNS_API_KEY }}
         run: 
           echo $COUNTDOWNS_APP_ID
