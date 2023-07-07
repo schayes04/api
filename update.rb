@@ -30,8 +30,6 @@ subs = 0
 active = 0
 new_cust = 0
 
-print projects
-
 projects.each do |project_id, api_key|
   resp = get_overview_metrics(api_key: api_key, project_id: project_id)
   metrics = resp["metrics"]
