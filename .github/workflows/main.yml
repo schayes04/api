@@ -30,8 +30,8 @@ jobs:
         run: |
           git config --local user.email "support@shayesapps.com"
           git config --local user.name "github-actions[bot]"
-          git add Gemfile.lock
-          git commit -a -m "Updated json values"
+          git add -A
+          git diff-index --quiet HEAD || git commit -m 'Updated json values'
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
