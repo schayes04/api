@@ -25,7 +25,7 @@ jobs:
           COUNTDOWNS_APP_ID: ${{ vars.COUNTDOWNS_APP_ID }}
           COUNTDOWNS_API_KEY: ${{ secrets.COUNTDOWNS_API_KEY }}
         run: 
-          echo $COUNTDOWNS_APP_ID
+          bundle exec ruby update.rb
       - name: Commit files
         run: |
           git config --local user.email "support@shayesapps.com"
