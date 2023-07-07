@@ -24,11 +24,7 @@ projects = {
   "#{ENV['COUNTDOWNS_APP_ID']}": "#{ENV['COUNTDOWNS_API_KEY']}"
 }
 
-revenue = 0
-mrr = 0
 subs = 0
-active = 0
-new_cust = 0
 
 projects.each do |project_id, api_key|
   resp = get_overview_metrics(api_key: api_key, project_id: project_id)
@@ -36,16 +32,8 @@ projects.each do |project_id, api_key|
 
   metrics.each do |metric|
     case metric["id"]
-    when "revenue"
-      revenue += metric["value"]
-    when "mrr"
-      mrr += metric["value"]
     when "active_subscriptions"
       subs += metric["value"]
-    when "active_users"
-      active += metric["value"]
-    when "new_customers"
-      new_cust += metric["value"]
     end
   end
 end
@@ -53,25 +41,9 @@ end
 data = {
   frames: [
     {
-      text: "$#{revenue.to_s}",
-      icon: 34
-    },
-    {
-      text: "$#{mrr.to_s}",
-      icon: 8381
-    },
-    {
       text: subs.to_s,
       icon: 42832
-    },
-    {
-      text: active.to_s,
-      icon: 5337
-    },
-    {
-      text: new_cust.to_s,
-      icon: 14024
-    },
+    }
   ]
 }
 
