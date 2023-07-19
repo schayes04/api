@@ -24,6 +24,10 @@ jobs:
         env:
           COUNTDOWNS_APP_ID: ${{ vars.COUNTDOWNS_APP_ID }}
           COUNTDOWNS_API_KEY: ${{ secrets.COUNTDOWNS_API_KEY }}
+          RECURRENCE_APP_ID: ${{ vars.RECURRENCE_APP_ID }}
+          RECURRENCE_API_KEY: ${{ secrets.RECURRENCE_API_KEY }}
+          PROGRESS_APP_ID: ${{ vars.PROGRESS_APP_ID }}
+          PROGRESS_API_KEY: ${{ secrets.PROGRESS_API_KEY }}
         run: 
           bundle exec ruby update.rb
       - name: Commit files
