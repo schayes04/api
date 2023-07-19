@@ -21,7 +21,9 @@ def self.get_overview_metrics(api_key:, project_id:)
 end
 
 projects = {
-  "#{ENV['COUNTDOWNS_APP_ID']}": "#{ENV['COUNTDOWNS_API_KEY']}"
+  "#{ENV['COUNTDOWNS_APP_ID']}": "#{ENV['COUNTDOWNS_API_KEY']}",
+  "#{ENV['RECURRENCE_APP_ID']}": "#{ENV['RECURRENCE_API_KEY']}",
+  "#{ENV['PROGRESS_APP_ID']}": "#{ENV['PROGRESS_API_KEY']}"
 }
 
 subs = 0
