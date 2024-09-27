@@ -22,6 +22,8 @@ jobs:
         run: bundle install
       - name: Run updates
         env:
+          BIRTHDAYS_APP_ID: ${{ vars.BIRTHDAYS_APP_ID }}
+          BIRTHDAYS_API_KEY: ${{ secrets.BIRTHDAYS_API_KEY }}
           COUNTDOWNS_APP_ID: ${{ vars.COUNTDOWNS_APP_ID }}
           COUNTDOWNS_API_KEY: ${{ secrets.COUNTDOWNS_API_KEY }}
           RECURRENCE_APP_ID: ${{ vars.RECURRENCE_APP_ID }}
