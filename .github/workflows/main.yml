@@ -26,6 +26,8 @@ jobs:
           BIRTHDAYS_API_KEY: ${{ secrets.BIRTHDAYS_API_KEY }}
           COUNTDOWNS_APP_ID: ${{ vars.COUNTDOWNS_APP_ID }}
           COUNTDOWNS_API_KEY: ${{ secrets.COUNTDOWNS_API_KEY }}
+          HOUSE_APP_ID: ${{ vars.HOUSE_APP_ID }}
+          HOUSE_API_KEY: ${{ secrets.HOUSE_API_KEY }}
           RECURRENCE_APP_ID: ${{ vars.RECURRENCE_APP_ID }}
           RECURRENCE_API_KEY: ${{ secrets.RECURRENCE_API_KEY }}
           PROGRESS_APP_ID: ${{ vars.PROGRESS_APP_ID }}
